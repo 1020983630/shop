@@ -1,0 +1,6 @@
+#更换国内镜像
+修改或新增 /etc/docker/daemon.json
+
+编辑 {"registry-mirrors": ["https://registry.docker-cn.com"]}
+
+systemctl restart docker.service

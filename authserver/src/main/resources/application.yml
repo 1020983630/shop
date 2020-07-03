@@ -1,0 +1,9 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: authserver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 10.0.1.200:8848

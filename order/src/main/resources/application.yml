@@ -1,0 +1,9 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: order
+  cloud:
+    nacos:
+      server-addr: 10.0.1.200:8848

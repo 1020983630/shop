@@ -6,4 +6,4 @@ spring:
     name: order
   cloud:
     nacos:
-      server-addr: 10.0.1.200:8848
+      server-addr: tencent:8848

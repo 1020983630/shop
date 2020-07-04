@@ -1,0 +1,17 @@
+docker pull mysql/mysql-server:5.7
+
+docker run -d \
+-p 3306:3306 \
+-v /opt/mysql/data:/var/lib/mysql \
+-e MYSQL_ROOT_PASSWORD=root \
+--name=mysql-server \
+--restart=always \
+mysql/mysql-server:5.7 \
+--character-set-server=utf8mb4 \
+--collation-server=utf8mb4_bin
+
+docker exec -it mysql-server bash
+mysql -uroot -proot
+CREATE USER 'shop'@'%' IDENTIFIED with mysql_native_password BY 'shop';
+GRANT all privileges ON *.* TO 'shop'@'%';
+flush privileges;

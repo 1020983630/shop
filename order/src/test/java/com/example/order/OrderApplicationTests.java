@@ -1,7 +1,9 @@
 package com.example.order;
 
-import com.example.order.pojo.Order;
-import com.example.order.service.OrderService;
+import com.alibaba.fastjson.JSON;
+import com.example.order.pojo.OrderForm;
+import com.example.order.service.OrderFormService;
+import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,7 +13,7 @@ import java.util.Optional;
 @SpringBootTest
 class OrderApplicationTests {
     @Autowired
-    private OrderService orderService;
+    private OrderFormService orderFormService;
 
     @Test
     void contextLoads() {
@@ -19,7 +21,7 @@ class OrderApplicationTests {
 
     @Test
     void testJpa() {
-        Optional<Order> order = orderService.getById("");
-        System.out.println(order);
+        Optional<OrderForm> orderForm = orderFormService.getById("123");
+        System.out.println(JSON.toJSONString(orderForm));
     }
 }

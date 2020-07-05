@@ -1,9 +1,9 @@
 package com.example.order.repository;
 
-import com.example.order.pojo.Order;
+import com.example.order.pojo.OrderForm;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-public interface OrderRepository extends JpaRepository<Order, String>, JpaSpecificationExecutor<Order> {
+public interface OrderFormRepository extends JpaRepository<OrderForm, String>, JpaSpecificationExecutor<OrderForm> {
 //    Order findById();
 }

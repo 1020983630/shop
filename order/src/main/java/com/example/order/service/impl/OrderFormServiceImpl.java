@@ -3,6 +3,8 @@ package com.example.order.service.impl;
 import com.example.order.pojo.OrderForm;
 import com.example.order.repository.OrderFormRepository;
 import com.example.order.service.OrderFormService;
+import com.example.order.vo.OrderFormVO;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +16,12 @@ public class OrderFormServiceImpl implements OrderFormService {
     private OrderFormRepository orderFormRepository;
 
     @Override
-    public Optional<OrderForm> getById(String id) {
-        return orderFormRepository.findById(id);
+    public OrderFormVO getById(String id) {
+        OrderFormVO orderFormVO = new OrderFormVO();
+        Optional<OrderForm> orderForm = orderFormRepository.findById(id);
+
+        BeanUtils.copyProperties(orderForm.get(), orderFormVO);
+
+        return orderFormVO;
     }
 }

@@ -1,9 +1,7 @@
 package com.example.order.service;
 
-import com.example.order.pojo.OrderForm;
-
-import java.util.Optional;
+import com.example.order.vo.OrderFormVO;
 
 public interface OrderFormService {
-    Optional<OrderForm> getById(String id);
+    OrderFormVO getById(String id);
 }

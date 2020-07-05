@@ -28,10 +28,12 @@
         <spring-cloud.version>2.2.3.RELEASE</spring-cloud.version>
         <spring-cloud-starter-alibaba-nacos-discovery.version>2.2.1.RELEASE</spring-cloud-starter-alibaba-nacos-discovery.version>
         <mysql.version>8.0.20</mysql.version>
+        <common.version>0.0.1-SNAPSHOT</common.version>
     </properties>
 
     <!-- 子模块-->
     <modules>
+        <module>common</module>
         <module>gateway</module>
         <module>authserver</module>
         <module>order</module>

@@ -19,7 +19,7 @@ spring:
       maximum-pool-size: 15
       auto-commit: true
       idle-timeout: 30000
-      pool-name: DatebookHikariCP
+      pool-name: OrderHikariCP
       max-lifetime: 1800000
       connection-timeout: 30000
       connection-test-query: select 1
@@ -32,5 +32,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         format_sql: true
     show-sql: true
-
+feign:
+  httpclient:
+    connection-timeout: 5000
 

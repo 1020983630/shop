@@ -26,7 +26,7 @@
         <java.version>14</java.version>
         <spring-boot.version>2.3.1.RELEASE</spring-boot.version>
         <spring-cloud.version>2.2.3.RELEASE</spring-cloud.version>
-        <spring-cloud-starter-alibaba-nacos.version>2.2.1.RELEASE</spring-cloud-starter-alibaba-nacos.version>
+        <spring-cloud-starter-alibaba.version>2.2.1.RELEASE</spring-cloud-starter-alibaba.version>
         <mysql.version>8.0.20</mysql.version>
         <common.version>0.0.1-SNAPSHOT</common.version>
     </properties>
@@ -67,6 +67,25 @@
                 <version>${spring-boot.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${spring-cloud-starter-alibaba.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${spring-cloud-starter-alibaba.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-sentinel -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+                <version>${spring-cloud-starter-alibaba.version}</version>
+            </dependency>
+
             <!--jdbc起步依赖-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -88,18 +107,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-            <version>${spring-cloud-starter-alibaba-nacos.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-            <version>${spring-cloud-starter-alibaba-nacos.version}</version>
         </dependency>
 
         <dependency>

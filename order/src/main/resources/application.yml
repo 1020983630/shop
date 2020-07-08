@@ -2,12 +2,6 @@ server:
   port: 9002
 
 spring:
-  application:
-    name: order
-  cloud:
-    nacos:
-      server-addr: tencent:8848
-
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://tencent:3306/shop?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&tinyInt1isBit=false
@@ -32,6 +26,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         format_sql: true
     show-sql: true
+
 feign:
   httpclient:
     connection-timeout: 5000

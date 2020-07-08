@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: order
+  cloud:
+    nacos:
+      server-addr: tencent:8848

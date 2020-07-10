@@ -17,10 +17,9 @@ public class GatewayApplication {
 
     @Bean
     public RouteLocator orderRouteLocator(RouteLocatorBuilder builder) {
-        return builder.routes()
-                .route("order",
-                        r -> r.path("/order/**")
-                              .uri("lb://order"))
-                .build();
+        RouteLocatorBuilder.Builder routes = builder.routes();
+        routes.route("order", r -> r.path("/order/**").uri("lb://order"));
+        routes.route("order", r -> r.path("/sentinel/**").uri("lb://order"));
+        return routes.build();
     }
 }

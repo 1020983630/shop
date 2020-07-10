@@ -4,3 +4,10 @@ spring:
   cloud:
     nacos:
       server-addr: tencent:8848
+      config:
+        server-addr: tencent:8848
+        file-extension: yaml
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8000

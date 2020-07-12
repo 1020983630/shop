@@ -6,4 +6,8 @@ public interface SentinelService {
     String blockHandlerClass();
 
     String fallback();
+
+    String limitThreadCount();
+
+    String limitQps();
 }

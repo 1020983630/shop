@@ -27,6 +27,8 @@
         <spring-boot.version>2.3.1.RELEASE</spring-boot.version>
         <spring-cloud.version>2.2.3.RELEASE</spring-cloud.version>
         <spring-cloud-starter-alibaba.version>2.2.1.RELEASE</spring-cloud-starter-alibaba.version>
+        <sentinel-gateway-adapter.version>1.7.2</sentinel-gateway-adapter.version>
+        <sentinel-transport-simple-http.version>1.7.2</sentinel-transport-simple-http.version>
         <mysql.version>8.0.20</mysql.version>
         <common.version>0.0.1-SNAPSHOT</common.version>
     </properties>
@@ -77,6 +79,19 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
                 <version>${spring-cloud-starter-alibaba.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.alibaba.csp/sentinel-spring-cloud-gateway-adapter -->
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-spring-cloud-gateway-adapter</artifactId>
+                <version>${sentinel-gateway-adapter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-transport-simple-http</artifactId>
+                <version>${sentinel-transport-simple-http.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-sentinel -->

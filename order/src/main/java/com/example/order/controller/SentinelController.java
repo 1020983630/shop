@@ -26,4 +26,26 @@ public class SentinelController {
     public String fallback() {
         return sentinelService.fallback();
     }
+
+    @GetMapping("/limitThreadCount")
+    public String limitThreadCount() {
+        for (int i = 0; i < 10; i++) {
+//            new Thread(() -> {
+//                sentinelService.limitThreadCount();
+//            });
+            sentinelService.limitThreadCount();
+        }
+        return "success";
+    }
+
+    @GetMapping("/limitQps")
+    public String limitQps() {
+        for (int i = 0; i < 1; i++) {
+//            new Thread(() -> {
+//                sentinelService.limitThreadCount();
+//            });
+            sentinelService.limitQps();
+        }
+        return "success";
+    }
 }

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: order
+    name: stock
   cloud:
     nacos:
       server-addr: tencent:8848

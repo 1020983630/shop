@@ -1,6 +1,7 @@
 package com.example.order.controller;
 
 import com.example.common.dto.ResultT;
+import com.example.order.request.PlaceOrderRequest;
 import com.example.order.service.OrderFormService;
 import com.example.order.vo.OrderFormVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 public class OrderController {
-//    https://www.cnblogs.com/cicada-smile/p/12544279.html
+    //    https://www.cnblogs.com/cicada-smile/p/12544279.html
     @Autowired
     private OrderFormService orderFormService;
 
@@ -31,5 +32,25 @@ public class OrderController {
     @RequestMapping("/get")
     public boolean get() {
         return useLocalCache;
+    }
+
+    @GetMapping("/decr")
+    public String decr() {
+        PlaceOrderRequest request = new PlaceOrderRequest();
+        request.setGoodsId("123");
+        request.setAddressee("杨建辉");
+        request.setMobile("17721015669");
+        request.setAddress("上海市锦秋路");
+        request.setNum(2);
+
+        orderFormService.placeOrder(request);
+
+        return "success";
+    }
+
+    @GetMapping("/retry")
+    public String retry() {
+        orderFormService.retry();
+        return "success";
     }
 }

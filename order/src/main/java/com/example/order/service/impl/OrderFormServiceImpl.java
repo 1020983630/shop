@@ -1,5 +1,6 @@
 package com.example.order.service.impl;
 
+import com.example.common.dto.ResultT;
 import com.example.common.enums.EOperation;
 import com.example.order.feign.StockClient;
 import com.example.order.pojo.OrderForm;
@@ -47,5 +48,10 @@ public class OrderFormServiceImpl implements OrderFormService {
         stockClient.decr(request.getGoodsId(), request.getNum());
 
         return EOperation.SUCCESS;
+    }
+
+    @Override
+    public ResultT<EOperation> retry() {
+        return stockClient.retry();
     }
 }

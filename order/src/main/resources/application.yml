@@ -31,6 +31,6 @@ feign:
   httpclient:
     connection-timeout: 10000
   sentinel:
-    enabled: true
+    enabled: false
 
 

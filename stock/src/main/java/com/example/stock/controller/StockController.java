@@ -30,6 +30,7 @@ public class StockController {
     public ResultT<EOperation> retry() throws InterruptedException {
         log.info("----------------");
 //        Thread.sleep(6000);
+        int err = 1 / 0;
         return ResultT.success(EOperation.SUCCESS);
     }
 }

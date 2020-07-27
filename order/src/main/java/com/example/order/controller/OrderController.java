@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 @RequestMapping("/order")
 @RestController
 @RefreshScope
@@ -35,7 +38,21 @@ public class OrderController {
     }
 
     @GetMapping("/decr")
-    public String decr() {
+    public String decr() throws Exception {
+//        ExecutorService executorService = Executors.newFixedThreadPool(10);
+//        for (int i = 0; i < 100; i++) {
+//            executorService.execute(() -> {
+//                PlaceOrderRequest request = new PlaceOrderRequest();
+//                request.setGoodsId("123");
+//                request.setAddressee("杨建辉");
+//                request.setMobile("17721015669");
+//                request.setAddress("上海市锦秋路");
+//                request.setNum(1);
+//
+//            orderFormService.placeOrder(request);
+//            });
+//        }
+
         PlaceOrderRequest request = new PlaceOrderRequest();
         request.setGoodsId("123");
         request.setAddressee("杨建辉");

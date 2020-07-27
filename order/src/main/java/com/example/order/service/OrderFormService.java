@@ -12,7 +12,7 @@ public interface OrderFormService {
      * place order
      * @param request
      */
-    EOperation placeOrder(PlaceOrderRequest request);
+    EOperation placeOrder(PlaceOrderRequest request) throws Exception;
 
     ResultT<EOperation> retry();
 }

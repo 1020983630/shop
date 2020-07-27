@@ -5,3 +5,6 @@ https://www.cnblogs.com/jyroy/p/11365935.html
 https://www.cnblogs.com/fsmly/p/11020641.html
 
 https://segmentfault.com/q/1010000022385440/a-1020000022389787
+
+bean 同名name/id 覆盖
+https://cloud.tencent.com/developer/article/1497702

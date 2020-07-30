@@ -8,3 +8,7 @@ https://segmentfault.com/q/1010000022385440/a-1020000022389787
 
 bean 同名name/id 覆盖
 https://cloud.tencent.com/developer/article/1497702
+
+# redis分布式锁
+https://www.jianshu.com/p/18359ab60c13
+https://www.cnblogs.com/rgcLOVEyaya/p/RGC_LOVE_YAYA_1003days.html

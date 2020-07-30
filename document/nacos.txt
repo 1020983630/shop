@@ -10,7 +10,7 @@ https://github.com/alibaba/nacos/blob/master/config/src/main/resources/META-INF/
 docker run -d \
 -e MODE=standalone \
 -e SPRING_DATASOURCE_PLATFORM=mysql \
--e MYSQL_SERVICE_HOST=172.16.0.13 \
+-e MYSQL_SERVICE_HOST=172.18.233.74 \
 -e MYSQL_SERVICE_PORT=3306 \
 -e MYSQL_SERVICE_USER=shop \
 -e MYSQL_SERVICE_PASSWORD=shop \

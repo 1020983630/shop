@@ -4,3 +4,6 @@
 编辑 {"registry-mirrors": ["https://registry.docker-cn.com"]}
 
 systemctl restart docker.service
+
+#官方脚本一键安装|阿里云镜像
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun

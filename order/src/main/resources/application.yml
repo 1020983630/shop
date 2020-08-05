@@ -27,6 +27,11 @@ spring:
         format_sql: true
     show-sql: true
 
+  redis:
+    cluster:
+      nodes: redis1:7001,redis2:7002,redis3:7003,redis4:7004,redis5:7005,redis6:7006
+    password: Aa_123456
+
 feign:
   httpclient:
     connection-timeout: 60000

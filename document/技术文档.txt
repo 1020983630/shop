@@ -12,6 +12,8 @@ https://cloud.tencent.com/developer/article/1497702
 # redis分布式锁
 https://www.jianshu.com/p/18359ab60c13
 https://www.cnblogs.com/rgcLOVEyaya/p/RGC_LOVE_YAYA_1003days.html
+# redis跳跃表
+https://www.cnblogs.com/hunternet/p/11248192.html#1872398300
 
 # 垃圾回收
 #【JVM】jstat命令详解---JVM的统计监测工具

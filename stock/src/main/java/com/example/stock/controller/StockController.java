@@ -19,9 +19,8 @@ public class StockController {
     private StockService stockService;
 
     @PutMapping("/decr")
-    public ResultT<EOperation> decr(String goodsId, int num) throws InterruptedException {
+    public ResultT<EOperation> decr(String goodsId, int num) {
         log.info("+++++++++++++++++++++++");
-        Thread.sleep(6000);
         EOperation eOperation = stockService.decr(goodsId, num);
         return ResultT.success(eOperation);
     }
@@ -30,6 +29,7 @@ public class StockController {
     public ResultT<EOperation> retry() throws InterruptedException {
         log.info("----------------");
 //        Thread.sleep(6000);
+        int err = 1 / 0;
         return ResultT.success(EOperation.SUCCESS);
     }
 }

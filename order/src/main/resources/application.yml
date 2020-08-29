@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://tencent:3306/shop?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&tinyInt1isBit=false
+    url: jdbc:mysql://ali-cloud:3306/shop?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&tinyInt1isBit=false
     username: shop
     password: shop
     type: com.zaxxer.hikari.HikariDataSource
@@ -27,9 +27,14 @@ spring:
         format_sql: true
     show-sql: true
 
+  redis:
+    cluster:
+      nodes: redis1:7001,redis2:7002,redis3:7003,redis4:7004,redis5:7005,redis6:7006
+    password: Aa_123456
+
 feign:
   httpclient:
-    connection-timeout: 10000
+    connection-timeout: 60000
   sentinel:
     enabled: true
 

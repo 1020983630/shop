@@ -11,6 +11,6 @@ public interface StockRepository extends JpaRepository<Stock, String>, JpaSpecif
 
     @Transactional
     @Modifying
-    @Query("update Stock s set s.surplusNum = s.surplusNum - ?2 where s.goodsId = ?1 and s.surplusNum - ?2 > 0 and s.status = 1 and s.deleteStatus = 0")
+    @Query("update Stock s set s.surplusNum = s.surplusNum - ?2 where s.goodsId = ?1 and s.surplusNum - ?2 >= 0 and s.status = 1 and s.deleteStatus = 0")
     int decr(String goodsId, int num);
 }

@@ -24,7 +24,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>14</java.version>
-        <spring-boot.version>2.3.1.RELEASE</spring-boot.version>
+        <spring-boot.version>2.5.12</spring-boot.version>
         <spring-cloud.version>2.2.3.RELEASE</spring-cloud.version>
         <spring-cloud-starter-alibaba.version>2.2.1.RELEASE</spring-cloud-starter-alibaba.version>
         <sentinel-gateway-adapter.version>1.7.2</sentinel-gateway-adapter.version>
